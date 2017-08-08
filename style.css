@@ -1,13 +1,16 @@
-* {
-  background-color: black;
-}
-
 p {
   color: red;
 }
 
 h1{
   color : blue;
-  font-family: fantasy;
+  font-family: cursive;
   background-color: white;
+}
+
+h2{
+  background-color: white;
+}
+body{
+  background-color: black;
 }
