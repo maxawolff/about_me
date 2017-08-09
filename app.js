@@ -5,7 +5,7 @@ var question2 = 'Question 2. Was I born in Washington State?';
 var question3 = 'Question 3. Have I ever coded before joining Code Fellows?';
 var question4 = 'Question 4. Have I ever been outside of the country?';
 var question5 = 'Question 5. Have I ever been to a live concert?';
-var question6 = 'What is my favorite number? I\'ll give you 4 guesses, it is between 0 and 1000';
+var question6 = 'What is my favorite number?';
 var question7 = 'Can you guess a band that I have seen live, I\'ll give you 6 guesses this time';
 var correctResponse = 'Yep, That\'s right!';
 var incorrectResponse = 'Nope, that\'s not right';
@@ -13,8 +13,9 @@ var favoriteNumber = 144;
 var bandsSeen = ['iron maiden', 'avenged sevonfold', 'rush', 'streetlight manifesto', 'slayer', 'metallica'];
 var correctAnswers = 0;
 
-alert('Hello there, this is my about me page. Were going to play a little game so that you can learn more about me. Please answer the following 5 questions in a yes or no fashion.');
-var theirName = prompt('Before we get started allow me to reintroduce myself, my name is Max, what\'s yours?');
+var theirName = prompt('Why hello there, my name is Max, what\'s yours?');
+alert('Hi ' + theirName + ', nice to meet you. This is my about me page, before I let you take a look around I\'d like to ask you a few questions. Please respond to the first five with a yes or no, the rest will be self explanatory.');
+
 var answer1 = prompt(question1);
 console.log('Asked the user the following question: ' + question1 + ' And they responded with ' + answer1);
 answer1 = answer1.toUpperCase();
@@ -109,22 +110,35 @@ for (var i = 0; i < 4; i++){
   var answer6 = prompt(question6);
   console.log('user guessed ' + answer6);
   var answer6 = parseInt(answer6);
+  var guessedWrong = true;
   if(answer6 === favoriteNumber){
     alert('That\'s right, great guess!');
     correctAnswers++;
+    guessedWrong = false;
     break;
   }
-  else{
-    alert('Nope, guess again');
+  else if(answer6 < 144){
+    alert('Nope, that answe is too small.');
   }
+  else if(answer6 > 144){
+    alert('Nope, that answe is too large.');
+  }
+  else{
+    alert('Is that even a number? You were supposed to guess a number between 1 and 1000');
+  }
+}
+if(guessedWrong){
+  alert('Looks like you couldn\'t guess it. The correct number was 144, I figured four tries would be enough but I guess not.');
 }
 
 for (var i = 0; i < 6; i ++){
   var whichBand = prompt(question7);
+  var guessedWrong = true;
   console.log('user guessed ' + whichBand);
   if(bandsSeen.includes(whichBand)){
-    alert('that\'s right, great guess!');
+    alert('that\'s right, great guess! The correct answers were Iron Maiden, Streetlight Manifesto, Avenged Sevonfold, Rush, Slayer, and Metallica!');
     correctAnswers++;
+    guessedWrong = false;
     break;
   }
   else{
@@ -132,4 +146,16 @@ for (var i = 0; i < 6; i ++){
   }
 }
 
-alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, great job I guess.');
+if(guessedWrong){
+  alert('Looks like you couldn\'t guess it. The correct answers were Iron Maiden, Streetlight Manifesto, Avenged Sevonfold, Rush, Slayer, and Metallica');
+}
+
+if(correctAnswers < 2){
+  alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, that\'s actually a terrible score, try harder next time');
+}
+else if(correctAnswers < 6){
+  alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, you did pretty well.');
+}
+else{
+  alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, way to nail it!');
+}
