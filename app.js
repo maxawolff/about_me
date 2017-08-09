@@ -14,6 +14,7 @@ var bandsSeen = ['iron maiden', 'avenged sevonfold', 'rush', 'streetlight manife
 var correctAnswers = 0;
 
 alert('Hello there, this is my about me page. Were going to play a little game so that you can learn more about me. Please answer the following 5 questions in a yes or no fashion.');
+var theirName = prompt('Before we get started allow me to reintroduce myself, my name is Max, what\'s yours?');
 var answer1 = prompt(question1);
 console.log('Asked the user the following question: ' + question1 + ' And they responded with ' + answer1);
 answer1 = answer1.toUpperCase();
@@ -131,4 +132,4 @@ for (var i = 0; i < 6; i ++){
   }
 }
 
-alert('thanks for playing, you got ' + correctAnswers + ' answers correct, great job I guess.');
+alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, great job I guess.');
