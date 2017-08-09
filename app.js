@@ -5,9 +5,11 @@ var question2 = 'Question 2. Was I born in Washington State?';
 var question3 = 'Question 3. Have I ever coded before joining Code Fellows?';
 var question4 = 'Question 4. Have I ever been outside of the country?';
 var question5 = 'Question 5. Have I ever been to a live concert?';
+var question6 = 'What is my favorite number? I\'ll give you 4 guesses, it is between 0 and 1000';
 var correctResponse = 'Yep, That\'s right!';
 var incorrectResponse = 'Nope, that\'s not right';
-
+var favoriteNumber = 144;
+/*
 alert('Hello there, this is my about me page. Were going to play a little game so that you can learn more about me. Please answer the following 5 questions in a yes or no fashion.');
 var answer1 = prompt(question1);
 console.log('Asked the user the following question: ' + question1 + ' And they responded with ' + answer1);
@@ -92,4 +94,15 @@ else if (answer5 === 'NO' || answer5 === 'N') {
 else{
   alert('It looks like your answer was not a yes or no response, please answer with a yes or no next time');
   console.log('They answered improperly, the answer needed to be a yes or no');
+}
+*/
+var answer6 = prompt(question6);
+console.log('asked the user the following question: ' + question6 + ' And they responded with ' + answer6);
+for (var i = 0; i < 4; i++){
+  if(answer6 === favoriteNumber){
+    alert('That\'s right, great guess!');
+  }
+  else{
+    alert('Nope, guess again');
+  }
 }
