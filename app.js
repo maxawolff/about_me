@@ -9,7 +9,6 @@ var correctResponse = 'Yep, That\'s right!';
 var incorrectResponse = 'Nope, that\'s not right';
 
 alert('Hello there, this is my about me page. Were going to play a little game so that you can learn more about me. Please answer the following 5 questions in a yes or no fashion.');
-//the following block of code gets repeated five times (there are slight changes depending on whether or not the answer is true or false) I reckognize that this would work better as a function but since we haven't learned that yet I will just have the code coppied.
 var answer1 = prompt(question1);
 console.log('Asked the user the following question: ' + question1 + ' And they responded with ' + answer1);
 answer1 = answer1.toUpperCase();
