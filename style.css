@@ -1,16 +1,18 @@
-p {
-  color: red;
+*{
+  font-family: Arial;
+  background-color: #0066ff;
 }
 
 h1{
-  color : blue;
-  font-family: cursive;
-  background-color: white;
+  font-size: 50px;
+  color: white;
 }
 
-h2{
-  background-color: white;
+p{
+  font-family: Times;
+  color: white;
 }
-body{
-  background-color: black;
+
+.answer{
+  color: black;
 }

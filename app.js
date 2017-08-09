@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 var question1 = 'Question 1. Do I own any pets?';
 var question2 = 'Question 2. Was I born in Washington State?';
 var question3 = 'Question 3. Have I ever coded before joining Code Fellows?';
@@ -94,3 +94,4 @@ else{
   alert('It looks like your answer was not a yes or no response, please answer with a yes or no next time');
   console.log('They answered improperly, the answer needed to be a yes or no');
 }
+*/
