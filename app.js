@@ -6,9 +6,11 @@ var question3 = 'Question 3. Have I ever coded before joining Code Fellows?';
 var question4 = 'Question 4. Have I ever been outside of the country?';
 var question5 = 'Question 5. Have I ever been to a live concert?';
 var question6 = 'What is my favorite number? I\'ll give you 4 guesses, it is between 0 and 1000';
+var question7 = 'Can you guess a band that I have seen live, I\'ll give you 6 guesses this time';
 var correctResponse = 'Yep, That\'s right!';
 var incorrectResponse = 'Nope, that\'s not right';
 var favoriteNumber = 144;
+var bandsSeen = ['iron maiden', 'avenged sevonfold', 'rush', 'streetlight manifesto', 'slayer', 'metallica'];
 /*
 alert('Hello there, this is my about me page. Were going to play a little game so that you can learn more about me. Please answer the following 5 questions in a yes or no fashion.');
 var answer1 = prompt(question1);
@@ -95,7 +97,7 @@ else{
   alert('It looks like your answer was not a yes or no response, please answer with a yes or no next time');
   console.log('They answered improperly, the answer needed to be a yes or no');
 }
-*/
+
 for (var i = 0; i < 4; i++){
   var answer6 = prompt(question6);
   console.log('user guessed ' + answer6);
@@ -106,5 +108,19 @@ for (var i = 0; i < 4; i++){
   }
   else{
     alert('Nope, guess again');
+  }
+}
+*/
+
+//teseting for da arrays
+for (var i = 0; i < 6; i ++){
+  var whichBand = prompt(question7);
+  console.log('user guessed ' + whichBand);
+  if(bandsSeen.includes(whichBand)){
+    alert('that\'s right, great guess!');
+    break;
+  }
+  else{
+    alert('guess again');
   }
 }
