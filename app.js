@@ -11,7 +11,8 @@ var correctResponse = 'Yep, That\'s right!';
 var incorrectResponse = 'Nope, that\'s not right';
 var favoriteNumber = 144;
 var bandsSeen = ['iron maiden', 'avenged sevonfold', 'rush', 'streetlight manifesto', 'slayer', 'metallica'];
-/*
+var correctAnswers = 0;
+
 alert('Hello there, this is my about me page. Were going to play a little game so that you can learn more about me. Please answer the following 5 questions in a yes or no fashion.');
 var answer1 = prompt(question1);
 console.log('Asked the user the following question: ' + question1 + ' And they responded with ' + answer1);
@@ -24,6 +25,7 @@ if(answer1 === 'YES' || answer1 === 'Y'){
 else if (answer1 === 'NO' || answer1 === 'N') {
   alert(correctResponse);
   console.log('They got the right answer');
+  correctAnswers++;
 }
 else{
   alert('It looks like your answer was not a yes or no response, please answer with a yes or no next time');
@@ -41,6 +43,7 @@ if(answer2 === 'YES' || answer2 === 'Y'){
 else if (answer2 === 'NO' || answer2 === 'N') {
   alert(correctResponse);
   console.log('They got the right answer');
+  correctAnswers++;
 }
 else{
   alert('It looks like your answer was not a yes or no response, please answer with a yes or no next time');
@@ -54,6 +57,7 @@ console.log('Changed their answer to ' + answer3 + ' in order to check if they p
 if(answer3 === 'YES' || answer3 === 'Y'){
   alert(correctResponse);
   console.log('They got the right answer');
+  correctAnswers++;
 }
 else if (answer3 === 'NO' || answer3 === 'N') {
   alert(incorrectResponse);
@@ -71,6 +75,7 @@ console.log('Changed their answer to ' + answer4 + ' in order to check if they p
 if(answer4 === 'YES' || answer4 === 'Y'){
   alert(correctResponse);
   console.log('They got the right answer');
+  correctAnswers++;
 }
 else if (answer4 === 'NO' || answer4 === 'N') {
   alert(incorrectResponse);
@@ -88,6 +93,7 @@ console.log('Changed their answer to ' + answer5 + ' in order to check if they p
 if(answer5 === 'YES' || answer5 === 'Y'){
   alert(correctResponse);
   console.log('They got the right answer');
+  correctAnswers++;
 }
 else if (answer5 === 'NO' || answer5 === 'N') {
   alert(incorrectResponse);
@@ -104,23 +110,25 @@ for (var i = 0; i < 4; i++){
   var answer6 = parseInt(answer6);
   if(answer6 === favoriteNumber){
     alert('That\'s right, great guess!');
+    correctAnswers++;
     break;
   }
   else{
     alert('Nope, guess again');
   }
 }
-*/
 
-//teseting for da arrays
 for (var i = 0; i < 6; i ++){
   var whichBand = prompt(question7);
   console.log('user guessed ' + whichBand);
   if(bandsSeen.includes(whichBand)){
     alert('that\'s right, great guess!');
+    correctAnswers++;
     break;
   }
   else{
     alert('guess again');
   }
 }
+
+alert('thanks for playing, you got ' + correctAnswers + ' answers correct, great job I guess.');
