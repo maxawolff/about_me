@@ -96,11 +96,13 @@ else{
   console.log('They answered improperly, the answer needed to be a yes or no');
 }
 */
-var answer6 = prompt(question6);
-console.log('asked the user the following question: ' + question6 + ' And they responded with ' + answer6);
 for (var i = 0; i < 4; i++){
+  var answer6 = prompt(question6);
+  console.log('user guessed ' + answer6);
+  var answer6 = parseInt(answer6);
   if(answer6 === favoriteNumber){
     alert('That\'s right, great guess!');
+    break;
   }
   else{
     alert('Nope, guess again');
