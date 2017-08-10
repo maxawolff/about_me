@@ -6,7 +6,7 @@ var question3 = 'Question 3. Have I ever coded before joining Code Fellows?';
 var question4 = 'Question 4. Have I ever been outside of the country?';
 var question5 = 'Question 5. Have I ever been to a live concert?';
 var question6 = 'What is my favorite number?';
-var question7 = 'Can you guess a band that I have seen live, I\'ll give you 6 guesses this time';
+var question7 = 'Can you guess a band that I have seen live?';
 var correctResponse = 'Yep, That\'s right!';
 var incorrectResponse = 'Nope, that\'s not right';
 var favoriteNumber = 144;
@@ -118,23 +118,24 @@ for (var i = 0; i < 4; i++){
     break;
   }
   else if(answer6 < 144){
-    alert('Nope, that answe is too small.');
+    alert('Nope, that answe is too small. ' + (3 - i) + ' guesses left');
   }
   else if(answer6 > 144){
-    alert('Nope, that answe is too large.');
+    alert('Nope, that answe is too large.' + (3 - i) + ' guesses left');
   }
   else{
-    alert('Is that even a number? You were supposed to guess a number between 1 and 1000');
+    alert('Is that even a number? You were supposed to guess a number between 1 and 1000 ' + (3 - i) + ' guesses left');
   }
 }
 if(guessedWrong){
-  alert('Looks like you couldn\'t guess it. The correct number was 144, I figured four tries would be enough but I guess not.');
+  alert('Looks like you couldn\'t guess it. The correct number was 144');
 }
 
 for (var i = 0; i < 6; i ++){
   var whichBand = prompt(question7);
   var guessedWrong = true;
   console.log('user guessed ' + whichBand);
+  whichBand = whichBand.toLowerCase();
   if(bandsSeen.includes(whichBand)){
     alert('that\'s right, great guess! The correct answers were Iron Maiden, Streetlight Manifesto, Avenged Sevonfold, Rush, Slayer, and Metallica!');
     correctAnswers++;
@@ -142,7 +143,7 @@ for (var i = 0; i < 6; i ++){
     break;
   }
   else{
-    alert('guess again');
+    alert('Guess again, ' + (5 - i) + ' guesses left');
   }
 }
 
