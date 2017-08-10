@@ -166,7 +166,7 @@ function askSeven(){
   }
   else{
     alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, way to nail it!');
-}
+  }
 }
 askOne();
 askTwo();
