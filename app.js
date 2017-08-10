@@ -113,7 +113,7 @@ function askFive(){
 }
 function askSix() {
   for (var i = 0; i < 4; i++){
-    var answer6 = prompt(question6);
+    var answer6 = prompt(question6 + ' You have ' + (4 - i) + ' guesses left');
     console.log('user guessed ' + answer6);
     var answer6 = parseInt(answer6);
     var guessedWrong = true;
@@ -157,17 +157,7 @@ function askSeven(){
   if(guessedWrong){
     alert('Looks like you couldn\'t guess it. The correct answers were Iron Maiden, Streetlight Manifesto, Avenged Sevonfold, Rush, Slayer, and Metallica');
   }
-
-  if(correctAnswers < 2){
-    alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, that\'s actually a terrible score, try harder next time');
-  }
-  else if(correctAnswers < 6){
-    alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, you did pretty well.');
-  }
-  else{
-    alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, way to nail it!');
-  }
-}
+};
 askOne();
 askTwo();
 askThree();
@@ -175,3 +165,13 @@ askFour();
 askFive();
 askSix();
 askSeven();
+
+if(correctAnswers < 2){
+  alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, that\'s actually a terrible score, try harder next time');
+}
+else if(correctAnswers < 6){
+  alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, you did pretty well.');
+}
+else{
+  alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, way to nail it!');
+}
