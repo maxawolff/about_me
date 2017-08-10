@@ -35,8 +35,6 @@ function askOne() {
     console.log('They answered improperly, the answer needed to be a yes or no');
   }
 }
-askOne();
-
 function askTwo() {
   var answer2 = prompt(question2);
   console.log('Asked the user the following question: ' + question2 + ' And they responded with ' + answer2);
@@ -170,3 +168,10 @@ function askSeven(){
     alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, way to nail it!');
 }
 }
+askOne();
+askTwo();
+askThree();
+askFour();
+askFive();
+askSix();
+askSeven();
