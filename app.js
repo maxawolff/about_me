@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 var question1 = 'Question 1. Do I own any pets?';
 var question2 = 'Question 2. Was I born in Washington State?';
 var question3 = 'Question 3. Have I ever coded before joining Code Fellows?';
@@ -159,4 +159,3 @@ else if(correctAnswers < 6){
 else{
   alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, way to nail it!');
 }
-*/
