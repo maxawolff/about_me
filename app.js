@@ -19,13 +19,11 @@ alert('Hi ' + theirName + ', nice to meet you. This is my about me page, before 
 function askOne() {
   var answer1 = prompt(question1);
   console.log('Asked the user the following question: ' + question1 + ' And they responded with ' + answer1);
-  answer1 = answer1.toUpperCase();
-  console.log('Changed their answer to ' + answer1 + ' in order to check if they provided a valid answer');
-  if(answer1 === 'YES' || answer1 === 'Y'){
+  if(answer1.toUpperCase === 'YES' || answer1.toUpperCase === 'Y'){
     alert(incorrectResponse);
     console.log('They got the wrong answer');
   }
-  else if (answer1 === 'NO' || answer1 === 'N') {
+  else if (answer1.toUpperCase === 'NO' || answer1.toUpperCase === 'N') {
     alert(correctResponse);
     console.log('They got the right answer');
     correctAnswers++;
@@ -38,13 +36,11 @@ function askOne() {
 function askTwo() {
   var answer2 = prompt(question2);
   console.log('Asked the user the following question: ' + question2 + ' And they responded with ' + answer2);
-  answer2 = answer2.toUpperCase();
-  console.log('Changed their answer to ' + answer2 + ' in order to check if they provided a valid answer');
-  if(answer2 === 'YES' || answer2 === 'Y'){
+  if(answer2.toUpperCase() === 'YES' || answer2.toUpperCase() === 'Y'){
     alert(incorrectResponse);
     console.log('They got the wrong answer');
   }
-  else if (answer2 === 'NO' || answer2 === 'N') {
+  else if (answer2.toUpperCase() === 'NO' || answer2.toUpperCase() === 'N') {
     alert(correctResponse);
     console.log('They got the right answer');
     correctAnswers++;
@@ -57,14 +53,12 @@ function askTwo() {
 function askThree() {
   var answer3 = prompt(question3);
   console.log('Asked the user the following question: ' + question3 + ' And they responded with ' + answer3);
-  answer3 = answer3.toUpperCase();
-  console.log('Changed their answer to ' + answer3 + ' in order to check if they provided a valid answer');
-  if(answer3 === 'YES' || answer3 === 'Y'){
+  if(answer3.toUpperCase() === 'YES' || answer3.toUpperCase() === 'Y'){
     alert(correctResponse);
     console.log('They got the right answer');
     correctAnswers++;
   }
-  else if (answer3 === 'NO' || answer3 === 'N') {
+  else if (answer3.toUpperCase() === 'NO' || answer3.toUpperCase() === 'N') {
     alert(incorrectResponse);
     console.log('They got the wrong answer');
   }
@@ -76,14 +70,12 @@ function askThree() {
 function askFour() {
   var answer4 = prompt(question4);
   console.log('Asked the user the following question: ' + question4 + ' And they responded with ' + answer4);
-  answer4 = answer4.toUpperCase();
-  console.log('Changed their answer to ' + answer4 + ' in order to check if they provided a valid answer');
-  if(answer4 === 'YES' || answer4 === 'Y'){
+  if(answer4.toUpperCase() === 'YES' || answer4.toUpperCase() === 'Y'){
     alert(correctResponse);
     console.log('They got the right answer');
     correctAnswers++;
   }
-  else if (answer4 === 'NO' || answer4 === 'N') {
+  else if (answer4.toUpperCase() === 'NO' || answer4.toUpperCase() === 'N') {
     alert(incorrectResponse);
     console.log('They got the wrong answer');
   }
@@ -95,14 +87,12 @@ function askFour() {
 function askFive(){
   var answer5 = prompt(question5);
   console.log('Asked the user the following question: ' + question5 + ' And they responded with ' + answer5);
-  answer5 = answer5.toUpperCase();
-  console.log('Changed their answer to ' + answer5 + ' in order to check if they provided a valid answer');
-  if(answer5 === 'YES' || answer5 === 'Y'){
+  if(answer5.toUpperCase() === 'YES' || answer5.toUpperCase() === 'Y'){
     alert(correctResponse);
     console.log('They got the right answer');
     correctAnswers++;
   }
-  else if (answer5 === 'NO' || answer5 === 'N') {
+  else if (answer5.toUpperCase() === 'NO' || answer5.toUpperCase() === 'N') {
     alert(incorrectResponse);
     console.log('They got the wrong answer');
   }
@@ -142,8 +132,7 @@ function askSeven(){
     var whichBand = prompt(question7);
     var guessedWrong = true;
     console.log('user guessed ' + whichBand);
-    whichBand = whichBand.toLowerCase();
-    if(bandsSeen.includes(whichBand)){
+    if(bandsSeen.includes(whichBand.toLowerCase())){
       alert('that\'s right, great guess! The correct answers were Iron Maiden, Streetlight Manifesto, Avenged Sevonfold, Rush, Slayer, and Metallica!');
       correctAnswers++;
       guessedWrong = false;
@@ -167,11 +156,11 @@ askSix();
 askSeven();
 
 if(correctAnswers < 2){
-  alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, that\'s actually a terrible score, try harder next time');
+  alert('Thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct. That\'s actually a terrible score, try harder next time');
 }
 else if(correctAnswers < 6){
-  alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, you did pretty well.');
+  alert('Thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct. You did pretty well.');
 }
 else{
-  alert('thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct, way to nail it!');
+  alert('Thanks for playing ' + theirName + ', you got ' + correctAnswers + ' answers correct. Way to nail it!');
 }
