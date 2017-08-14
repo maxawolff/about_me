@@ -19,11 +19,11 @@ alert('Hi ' + theirName + ', nice to meet you. This is my about me page, before 
 function askOne() {
   var answer1 = prompt(question1);
   console.log('Asked the user the following question: ' + question1 + ' And they responded with ' + answer1);
-  if(answer1.toUpperCase === 'YES' || answer1.toUpperCase === 'Y'){
+  if(answer1.toUpperCase() === 'YES' || answer1.toUpperCase() === 'Y'){
     alert(incorrectResponse);
     console.log('They got the wrong answer');
   }
-  else if (answer1.toUpperCase === 'NO' || answer1.toUpperCase === 'N') {
+  else if (answer1.toUpperCase() === 'NO' || answer1.toUpperCase() === 'N') {
     alert(correctResponse);
     console.log('They got the right answer');
     correctAnswers++;
